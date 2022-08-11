@@ -27,9 +27,8 @@ sudo apt-get update && sudo apt-get install -y containerd
 sudo mkdir -p /etc/containerd
 sudo containerd config default | sudo tee /etc/containerd/config.toml
 
-# restart containerd and verify it is running
+# restart containerd service
 sudo systemctl restart containerd
-sudo systemctl status containerd
 
 # disable swap
 sudo swapoff -a
