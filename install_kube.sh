@@ -36,7 +36,7 @@ sudo apt-get install containerd.io
 
 # create default config file for containrd
 sudo mkdir -p /etc/containerd
-sudo containerd config default | sudo tee /etc/containerd/config.toml
+cat ./config.toml | sudo tee /etc/containerd/config.toml
 
 # restart containerd service
 sudo systemctl restart containerd
