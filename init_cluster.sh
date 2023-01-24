@@ -2,7 +2,7 @@
 # RUN ONLY ON CONTROL PLANE NODE
 
 # initialize k8s cluster on control plane node using kubeadm
-sudo kubeadm init --pod-network-cidr 10.0.0.0/16 --kubernetes-version 1.24.0
+sudo kubeadm init --config kubeadm-config.yaml
 
 # set kubectl access
 mkdir -p $HOME/.kube
