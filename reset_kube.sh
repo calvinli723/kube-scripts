@@ -1,8 +1,8 @@
 sudo kubeadm reset
 
-etcdctl rm --recursive registry
-rm -rf /var/lib/cni
-rm -rf /run/flannel
-rm -rf /etc/cni
-ifconfig cni0 down
-brctl delbr cni0
+sudo etcdctl rm --recursive registry
+sudo rm -rf /var/lib/cni
+sudo rm -rf /run/flannel
+sudo rm -rf /etc/cni
+sudo ifconfig cni0 down
+sudo brctl delbr cni0
