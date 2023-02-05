@@ -1,8 +1,8 @@
 sudo kubeadm reset
 
-sudo etcdctl rm --recursive registry
-sudo rm -rf /var/lib/cni
-sudo rm -rf /run/flannel
-sudo rm -rf /etc/cni
-sudo ifconfig cni0 down
-sudo brctl delbr cni0
+if [ -f /etc/cni/net.d ]; then
+    sudo rm -rf /etc/cni/net.d
+fi
+
+sudo iptables -F && sudo iptables -t nat -F && sudo iptables -t mangle -F && sudo iptables -X
+sudo swapon -a
